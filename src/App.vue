@@ -41,7 +41,7 @@ export default {
           params,
         })
         .then((resp) => {
-          this.store.tvSeriesArray = resp.data.result;
+          this.store.tvSeriesArray = resp.data.results;
         });
     },
   },
@@ -51,8 +51,17 @@ export default {
 <template>
   <AppHeader @search="heandleSearch" />
   <div class="container">
+    <h2>MOVIES</h2>
     <div class="row">
       <div class="col" v-for="card in store.filmArray">
+        <AppCards :item="card" />
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h2>TV SERIES</h2>
+    <div class="row">
+      <div class="col" v-for="card in store.tvSeriesArray">
         <AppCards :item="card" />
       </div>
     </div>
