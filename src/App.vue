@@ -16,7 +16,7 @@ export default {
   methods: {
     heandleSearch() {
       const params = {
-        apiKey: this.store.api_key,
+        api_key: this.store.api_key,
         query: this.store.userSearch,
       };
       if (this.store.userSearch) {
