@@ -8,4 +8,5 @@ export const store = reactive({
   filmArray: [],
   tvSeriesArray: [],
   userSearch: "",
+  vote: 5,
 });

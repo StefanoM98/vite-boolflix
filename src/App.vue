@@ -50,24 +50,35 @@ export default {
 
 <template>
   <AppHeader @search="heandleSearch" />
-  <div class="container">
-    <h2>MOVIES</h2>
-    <div class="row">
-      <div class="col" v-for="card in store.filmArray">
-        <AppCards :item="card" />
+  <main>
+    <div class="container-fluid">
+      <h2>MOVIES</h2>
+      <div class="row">
+        <div class="col" v-for="card in store.filmArray">
+          <AppCards :item="card" />
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <h2>TV SERIES</h2>
-    <div class="row">
-      <div class="col" v-for="card in store.tvSeriesArray">
-        <AppCards :item="card" />
+    <div class="container-fluid mt-4">
+      <h2>TV SERIES</h2>
+      <div class="row">
+        <div class="col" v-for="card in store.tvSeriesArray">
+          <AppCards :item="card" />
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <style lang="scss">
 @use "./styles/general.scss" as *;
+main {
+  background-color: black;
+  h2 {
+    color: white;
+    background-color: rgba($color: white, $alpha: 0.3);
+    text-align: center;
+    padding: 10px;
+  }
+}
 </style>
